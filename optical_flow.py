@@ -36,7 +36,7 @@ def remap(img, flow, border_mode = cv2.BORDER_REFLECT_101):
 
 
 def center_crop_image(img, w, h):
-    y, x, _ = img.shape
+    y, x = img.shape[:2]
     width_indent = int((x - w) / 2)
     height_indent = int((y - h) / 2)
     cropped_img = img[height_indent:y-height_indent, width_indent:x-width_indent]
